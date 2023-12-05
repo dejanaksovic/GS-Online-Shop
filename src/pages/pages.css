@@ -1,0 +1,489 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.bgImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    height: 18rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    background-position: center;
+}
+.bgImage h2 {
+    z-index: 10;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.bgImage::after {
+    width: 96%;
+    height: 96%;
+    content: "";
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.419), rgba(0, 0, 0, 0.063));
+
+    border: 2px solid white;
+}
+
+.bgImage .btnSviP {
+    z-index: 10;
+    width: 12rem;
+    background-color: rgb(255, 125, 0);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* Svi proizvodi */
+.sviProizvodi {
+    padding-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.sviProizvodi h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.sviProizvodi .card {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 300px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+    cursor: pointer;
+}
+* {
+    margin: 0;
+}
+.card img {
+    width: 100%;
+    height: 70%;
+}
+.sviProizvodi .card .textContent {
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    height: 30%;
+    width: 100%;
+}
+.sviProizvodi .card .cena {
+    white-space: nowrap;
+}
+.cena {
+    white-space: nowrap;
+}
+.sviProizvodi .card .cardNaslov {
+    text-align: center;
+    height: 30px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.popust {
+    color: orange;
+}
+.textConetent p {
+    text-align: center;
+}
+.akcijaMark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(120, 27, 27);
+    padding: 0.2rem;
+    color: white;
+}
+
+.selektovi {
+    display: flex;
+    width: 250px;
+    height: 40px;
+    justify-content: space-around;
+    padding-left: 1rem;
+}
+.selektovi select {
+    cursor: pointer;
+    height: 100%;
+    font-size: 1rem;
+    color: rgb(60, 60, 60);
+    text-transform: uppercase;
+    width: 120px;
+    background-color: rgb(246, 255, 244);
+    border: none;
+    display: flex;
+    border-radius: 2px;
+    margin: 2px;
+}
+
+.selektovi .cena {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.cena p {
+    margin: 0;
+}
+
+/* proizvodKontainer */
+.proizvodContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.proizvodContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+}
+.naslovProizvod {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.promocije {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.promocije h2 {
+    color: orange;
+}
+.promocijaCene {
+    width: 100%;
+}
+.containerPromocijaTable {
+    border: 2px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    padding: 0.3rem;
+    margin-top: 2rem;
+    width: 99%;
+    cursor: pointer;
+}
+.promocijaTable {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerPromocijaTableC {
+    background-color: rgb(246, 255, 244);
+    border: 3px solid rgb(242, 134, 29);
+}
+.promocijaTable .naslov {
+    color: rgb(40, 131, 48);
+    font-size: 16px;
+    font-weight: 700;
+}
+.promocijaTable .podNaslov {
+    text-transform: lowercase;
+
+    color: white;
+    border-radius: 3px;
+    padding: 1px;
+    background: linear-gradient(
+        270deg,
+        rgb(255, 163, 80) 0%,
+        rgb(242, 134, 29) 100%
+    );
+}
+.promocijaTable .cena {
+    width: 20%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    color: red;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.promocijaTable .cena strike {
+    color: rgb(66, 66, 66);
+}
+
+.naslovPodNaslov {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.kupiSlika {
+    width: 70px;
+    height: 90px;
+    border-radius: 5px;
+}
+.korpaContainer {
+    width: 100%;
+}
+.korpaContainer div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.korpaContainer {
+    margin-top: 2rem;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(209, 209, 209);
+    padding: 0.3rem;
+    width: 98%;
+}
+.korpaContainer .cenaPopust .pr {
+    color: red;
+}
+.korpaContainer .ukupnoKorpe {
+    border-top: 1px solid rgb(209, 209, 209);
+    padding-top: 1rem;
+    font-weight: bold;
+}
+.korpaContainer .ukupnoKorpe .pr {
+    font-size: 17px;
+}
+.korpaContainer .pr {
+    font-weight: normal;
+    font-weight: bold;
+}
+
+.nacinDostave div {
+    border-top: 1px solid rgb(209, 209, 209);
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.nacinDostave h2 {
+    color: black;
+}
+.nacinDostave div h2 {
+    font-size: 15px;
+}
+form {
+    width: 100%;
+    margin-top: 1rem;
+}
+form div {
+    width: 100%;
+    flex-direction: column;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+form div div input {
+    width: 90%;
+    border: none;
+    height: 40px;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid rgb(209, 209, 209);
+}
+form div div input:focus {
+    outline: none;
+    border: 5px solid rgba(0, 162, 255, 0.403);
+}
+form div div {
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.formContainer {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formContainer h2 {
+    color: black;
+}
+.formIcon {
+    background-color: rgb(214, 214, 214);
+    padding: 0.7rem;
+    font-size: 20px;
+}
+.formButton {
+    width: 99%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(242, 134, 29) !important;
+    margin-top: 0.7rem;
+    padding: 1rem;
+    color: white;
+    border: none;
+    position: relative;
+    animation: horizontal-shaking 0.5s infinite;
+    cursor: pointer;
+}
+.formButton:hover {
+    animation: none;
+}
+
+.garancija {
+    width: 100%;
+    height: 150px;
+    padding: 1rem;
+}
+
+.garancija img {
+    height: 100%;
+    width: 100%;
+}
+
+.deskripcijaProizvoda {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.deskripcijaProizvoda h2 {
+    letter-spacing: 3px;
+    color: rgb(45, 43, 43);
+    font-size: 24px;
+    text-align: center;
+}
+
+.deskripcijaProizvoda p {
+    letter-spacing: 3px;
+
+    color: rgb(45, 43, 43);
+
+    font-size: 17px;
+    text-align: center;
+}
+
+@keyframes horizontal-shaking {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.catalog {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.catalog img {
+    height: auto;
+    width: 90%;
+}
+
+@media screen and (min-width: 1200px) {
+    .carousel {
+        position: fixed;
+    }
+    .formContainer {
+        width: 80%;
+    }
+    .card {
+        width: 20% !important;
+        height: 370px;
+    }
+
+    .promocije {
+        width: 900px;
+    }
+    .bgImage {
+        height: 60vh;
+    }
+    .catalog img {
+        height: auto;
+        width: 45%;
+    }
+
+    .proizvodContainer {
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        padding-left: 2.5rem;
+    }
+    .proizvodContent {
+        min-height: 100vh;
+        justify-content: space-around;
+    }
+    .promocijaCene {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .containerPromocijaTable {
+        width: 90%;
+    }
+    .korpaContainer {
+        width: 90%;
+    }
+    .garancija {
+        width: 60% !important;
+        padding: 2rem;
+        height: 200px;
+    }
+    .deskripcijaProizvoda p {
+        width: 50%;
+    }
+}

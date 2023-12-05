@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        rgb(159, 159, 159),
+        white,
+        white,
+        white,
+        white,
+        white,
+        white,
+        white,
+        white,
+        rgb(236, 235, 235),
+        white,
+        white,
+        rgb(223, 221, 221),
+        white,
+        white,
+        white,
+        rgb(236, 235, 235),
+        white,
+        white,
+        rgb(223, 221, 221),
+        white
+    );
+}
+button {
+    cursor: pointer;
+}

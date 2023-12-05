@@ -1,0 +1,235 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: 1s;
+
+    /* Početna boja linije */
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+nav a {
+    margin: 0 1rem;
+    color: var(--textColor);
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: var(--secondaryColor);
+}
+.phoneIcon {
+    color: red;
+}
+header .nav-btn {
+    padding: 0px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+
+.nav-btn-spec {
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 23px;
+    width: 5px;
+}
+
+.bagItems {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    right: -80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: 0.5s;
+    width: 300px;
+    background-color: white;
+    padding-top: 6rem;
+    letter-spacing: 2px;
+    padding-left: 1rem;
+}
+.showBag {
+    right: 0%;
+    /* transform: translateX(00%); */
+}
+.bagListOfItems {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.bagListOfItems h2 {
+    font-size: 30px;
+    font-weight: 100;
+}
+.bagItems button {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    color: gray;
+    border: none;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+header div,
+nav {
+    display: flex;
+    align-items: center;
+}
+.Logo {
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Logo img {
+    height: auto;
+    position: absolute;
+    width: 15%;
+}
+
+@media only screen and (max-width: 1024px) {
+    header .nav-btn {
+        visibility: visible;
+        opacity: 1;
+    }
+    nav a {
+        color: black;
+    }
+    .Logo img {
+        height: auto;
+        position: absolute;
+        left: 10;
+        width: 30%;
+    }
+    nav a::after {
+        display: none;
+    }
+    .bars {
+        color: white !important;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        left: -150vh;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: white;
+
+        transition: 0.5s;
+    }
+
+    header .responsive_nav {
+        left: 0;
+        justify-content: start;
+        padding-top: 6rem;
+        width: 80%;
+        align-items: start;
+        letter-spacing: 2px;
+        z-index: 200;
+    }
+
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+    }
+}
+
+.pozovi {
+    padding: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: rgb(208, 208, 208);
+    display: flex;
+    gap: 20px;
+}
+
+/* ` */
+
+.pretraziMain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 20px;
+    color: gray;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.pretraziMainDisplay {
+    display: flex;
+}
+
+.pretraziMain .iconDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 120%;
+    width: 20%;
+    cursor: pointer;
+}
+
+.pretrazi {
+    border-radius: 0;
+    border: none;
+    height: 110%;
+    width: 90%;
+    font-size: 25px;
+}
+.pretrazi:focus {
+    outline: none;
+}
+.pretrazi::placeholder {
+    font-size: 20px;
+}

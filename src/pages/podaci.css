@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container9 {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pa9 {
+    margin-top: 5%;
+}
+
+.pa9 {
+    margin-bottom: 5%;
+}
+.goree9 {
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.goree10 {
+    width: 58%;
+    height: 80%;
+    flex-direction: column;
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.slidza {
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.podrska {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    background-color: white;
+    border: 4px solid black;
+}
+.beg {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 3px;
+    border: none;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: darkorange;
+}
+
+.in9 {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.h-9 {
+    font-weight: 100;
+}
+.sreddina {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.levastrana {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding-left: 20px;
+    padding-top: 40px;
+}
+.desnastrana {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.slika1 {
+    width: 350px;
+    padding-top: 20px;
+}
+.orange {
+    width: 120px;
+    background-color: darkorange;
+    color: white;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+@media (max-width: 820px) {
+    .h-9 {
+        font-size: 25px;
+        padding-top: 10px;
+    }
+    .in9 {
+        width: 100%;
+        height: 100%;
+        gap: 50px;
+    }
+    .goree9 {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .sreddina {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 10px;
+    }
+    .levastrana {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .desnastrana {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slika1 {
+        width: 95%;
+    }
+    .podrska {
+        width: 100%;
+        gap: 50px;
+        margin-top: 0;
+        border: 3px solid black;
+    }
+    .goree10 {
+        width: 100%;
+        padding: 20px;
+    }
+}
+@media (max-width: 392px) {
+    .h-9 {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+}
