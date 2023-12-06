@@ -1,47 +1,22 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./admin.css";
 import { MyContext } from "../context";
+import { useGetOrders } from "../hooks/useGetOrders";
 // src/App.js
 
-const orders = [
-    {
-        id: 1,
-        firstName: "John",
-        lastName: "Doe",
-        phone: "123-456-7890",
-        address: "123 Main St, City",
-        productName: "Smartphone",
-        color: ["Black", "Pink"],
-        model: ["Iphone", "Android"],
-        option: ["/"],
-        total: 599.99,
-        quantity: 2,
-        postarina: 400,
-    },
-    {
-        id: 2,
-        firstName: "John",
-        lastName: "Doe",
-        phone: "123-456-7890",
-        address: "123 Main St, City",
-        productName: "Smartphone",
-        color: ["BLUE"],
-        model: ["/"],
-        option: ["IPHONE"],
-        total: 599.99,
-        quantity: 2,
-        postarina: 600,
-    },
-    // Dodajte više redova prema potrebi
-];
-
 const AdminPage = () => {
+    const { loading: dataLoading, error:dataError, orders, getOrders } = useGetOrders();
+
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [logged, setLogged] = useState(true);
     const { dataForAdmin } = useContext(MyContext);
     console.log("why nothin", dataForAdmin);
+
+    useEffect(() => {
+        getOrders();
+    }, [])
 
     return (
         <div className="adminContainer">
@@ -90,53 +65,47 @@ const AdminPage = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {dataForAdmin.map((el) => {
+                        {orders.map((e) => {
                             return (
                                 <tr>
-                                    <td data-label="Ime">{el.korisnik.ime}</td>
+                                    <td data-label="Ime">{e?.name}</td>
                                     <td data-label="Prezime">
-                                        {el.korisnik.prezime}
+                                        {e?.surname}
                                     </td>
                                     <td data-label="Adresa">
-                                        {el.korisnik.adresa}
+                                        {e?.adress}
                                     </td>
                                     <td data-label="Grad">
-                                        {el.korisnik.grad}
+                                        {e?.city}
                                     </td>
                                     <td data-label="Br.tel">
-                                        {el.korisnik.telefon}
+                                        {e?.phone}
                                     </td>
                                     <td data-label="Naziv Proizvoda">
-                                        {el.naslov}
+                                        {e?.orders?.name}
                                     </td>
 
                                     <td data-label="Kolicina">
-                                        {el.kvantitet}
+                                        {e.orders?.quantity}
                                     </td>
 
                                     <td data-label="Ukupna cena">
-                                        {el.ukupno}
+                                        {e?.all || null}
                                     </td>
                                     <td data-label="Model">
-                                        {el.model.length > 2
-                                            ? el.model.join(" ") + " "
-                                            : "/"}
+                                        {e?.model || null}
                                     </td>
                                     <td data-label="Opcija">
-                                        {el.opcije.length > 2
-                                            ? el.opcije.join(" ") + " "
-                                            : "/"}
+                                        {e?.option || null}
                                     </td>
                                     <td data-label="Boja">
-                                        {el.color.length > 2
-                                            ? el.color.join(" ") + " "
-                                            : "/"}
+                                        {e?.color || null}
                                     </td>
                                     <td data-label="Postarina">
-                                        {el.postarina}
+                                        {e?.taxes || null}
                                     </td>
 
-                                    <a href={`tel:+381${el?.phone?.slice(1)}`}>
+                                    <a href={`tel:+381${e?.phone?.slice(1)}`}>
                                         POZOVI KUPCA
                                     </a>
                                 </tr>

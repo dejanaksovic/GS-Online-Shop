@@ -14,8 +14,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SviProizvodi from "./SviProizvodi";
 import { MyContext } from "../context";
 import SelectComponent from "./seletComponent";
+import { useMakeOrder } from "../hooks/useMakeOrder";
 
 export default function Proizvod() {
+
+    const {error, loading, makeOrder} = useMakeOrder();
+
     const {
         poruceneOpcija,
         poruceneColor,
@@ -26,7 +30,7 @@ export default function Proizvod() {
         dataForAdmin,
         setDataForAdmin,
     } = useContext(MyContext);
-    console.log(dataForAdmin);
+
     const { naziv } = useParams();
 
     let item = Products.filter((item) => item.naslov === naziv);
@@ -40,7 +44,6 @@ export default function Proizvod() {
     });
     console.log("proizvod", poruceneColor, poruceneModel, poruceneOpcija);
 
-    const navigate = useNavigate();
 
     const [invalidFields, setInvalidFields] = useState();
     const [kvantitet, setKvantitet] = useState(1);
@@ -87,12 +90,11 @@ export default function Proizvod() {
         if (invalidFieldsArray == 0 && chosen.length > 2) {
             sendDataFunction();
             console.log("DATA FRO ADMIN", dataForAdmin);
-            navigate("/admin");
         }
 
         if (invalidFieldsArray.length === 0 && postarina != 0) {
             // Form is valid, handle submission logic here
-            console.log("Form data submitted:", formData);
+            makeOrder(formData.ime, formData.prezime, formData.grad, formData.adresa, formData.telefon, {name: naziv, quantity: kvantitet});
             setIzvrsena(true);
         }
     };
