@@ -1,1 +1,1 @@
-export const Url = 'http://localhost:5000'
+export const Url = 'https://gs-backend-3f7p.onrender.com'
