@@ -5,7 +5,7 @@ import { Url } from "../additionals/vars";
 export const useMakeOrder = () => {
    const [error, setError] = useState(null);
    const [loading, setLoading] = useState(false);
-   const makeOrder = async (name, surname, city, adress, phone, orders) => {
+   const makeOrder = async (name, surname, city, adress, phone, orders, summedPrice, shipping) => {
       try {
          await axios.post(`${Url}/orders`, {
             name,
@@ -13,7 +13,9 @@ export const useMakeOrder = () => {
             city,
             adress,
             phone,
-            orders
+            orders,
+            summedPrice,
+            shipping
          })
       }
       catch(err) {

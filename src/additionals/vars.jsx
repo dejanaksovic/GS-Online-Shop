@@ -1,1 +1,1 @@
-export const Url = 'https://gs-backend-3f7p.onrender.com'
+export const Url = 'https://gs-sho-frontend.onrender.com';

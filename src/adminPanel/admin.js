@@ -75,9 +75,6 @@ const AdminPage = () => {
                                     <td data-label="Adresa">
                                         {e?.adress}
                                     </td>
-                                    <td data-label="Grad">
-                                        {e?.city}
-                                    </td>
                                     <td data-label="Br.tel">
                                         {e?.phone}
                                     </td>
@@ -90,19 +87,19 @@ const AdminPage = () => {
                                     </td>
 
                                     <td data-label="Ukupna cena">
-                                        {e?.all || null}
+                                        {e?.orders?.summedPrice || null}
                                     </td>
                                     <td data-label="Model">
-                                        {e?.model || null}
+                                        {e?.orders?.model || null}
                                     </td>
                                     <td data-label="Opcija">
-                                        {e?.option || null}
+                                        {e?.orders?.option || null}
                                     </td>
                                     <td data-label="Boja">
-                                        {e?.color || null}
+                                        {e?.orders?.color || null}
                                     </td>
                                     <td data-label="Postarina">
-                                        {e?.taxes || null}
+                                        {e?.orders?.shipping || null}
                                     </td>
 
                                     <a href={`tel:+381${e?.phone?.slice(1)}`}>

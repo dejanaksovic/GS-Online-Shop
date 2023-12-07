@@ -77,7 +77,7 @@ export default function Proizvod() {
             kvantitet: kvantitet,
             ukupno: price.cenaSaPopustom + postarina,
         };
-
+        
         setDataForAdmin([...dataForAdmin, combinedObject]);
         console.log(combinedObject.ukupno, price.cenaSaPopustom);
     }
@@ -86,15 +86,18 @@ export default function Proizvod() {
         const invalidFieldsArray = Object.keys(formData).filter(
             (key) => !formData[key]
         );
+
+
         setInvalidFields(invalidFieldsArray);
         if (invalidFieldsArray == 0 && chosen.length > 2) {
             sendDataFunction();
             console.log("DATA FRO ADMIN", dataForAdmin);
         }
 
+
         if (invalidFieldsArray.length === 0 && postarina != 0) {
             // Form is valid, handle submission logic here
-            makeOrder(formData.ime, formData.prezime, formData.grad, formData.adresa, formData.telefon, {name: naziv, quantity: kvantitet});
+            makeOrder(formData.ime, formData.prezime, formData.grad, formData.adresa, formData.telefon, {name: naziv, quantity: kvantitet, model: poruceneModel[0], color: poruceneColor[0], option: poruceneOpcija[0]}, price.cenaSaPopustom + postarina, postarina);
             setIzvrsena(true);
         }
     };
