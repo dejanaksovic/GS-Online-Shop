@@ -68,7 +68,7 @@
 .sviProizvodi .card {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 180px;
     height: 300px;
     position: relative;
     text-decoration: none;
@@ -83,7 +83,7 @@
     height: 70%;
 }
 .sviProizvodi .card .textContent {
-    font-size: 13.5px;
+    font-size: 10.5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,9 +92,7 @@
     height: 30%;
     width: 100%;
 }
-.sviProizvodi .card .cena {
-    white-space: nowrap;
-}
+
 .cena {
     white-space: nowrap;
 }
@@ -102,7 +100,7 @@
     text-align: center;
     height: 30px;
     margin-bottom: 0px;
-    font-size: 12px;
+    font-size: 10px;
     color: gray;
     text-transform: uppercase;
 }
@@ -418,6 +416,15 @@ form div div {
         transform: translateX(0);
     }
 }
+ .sviProizvodi .card .cardNaslov {
+        font-size: 13px;
+    }
+    .sviProizvodi .card {
+        font-size: 13px;
+    }
+    .sviProizvodi .card .textContent .cena {
+        font-size: 14px;
+    }
 
 .catalog {
     display: flex;
