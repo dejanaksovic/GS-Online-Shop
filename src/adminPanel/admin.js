@@ -87,7 +87,7 @@ const AdminPage = () => {
                                     </td>
 
                                     <td data-label="Ukupna cena">
-                                        {e?.orders?.summedPrice || null}
+                                        {e?.summedPrice || null}
                                     </td>
                                     <td data-label="Model">
                                         {e?.orders?.model || null}
@@ -99,7 +99,7 @@ const AdminPage = () => {
                                         {e?.orders?.color || null}
                                     </td>
                                     <td data-label="Postarina">
-                                        {e?.orders?.shipping || null}
+                                        {e?.shipping || null}
                                     </td>
 
                                     <a href={`tel:+381${e?.phone?.slice(1)}`}>
