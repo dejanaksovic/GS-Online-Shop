@@ -1,1 +1,1 @@
-export const Url = 'https://gs-sho-frontend.onrender.com';
+export const Url = 'http://localhost:5000';
