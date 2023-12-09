@@ -11,6 +11,7 @@ export const useGetOrders = () => {
       console.log("Started");
       try {
          const orders = await axios.get(`${Url}/orders`);
+         console.log(orders);
          setOrders(orders.data.orders);
       }
       catch(err) {

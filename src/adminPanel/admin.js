@@ -20,7 +20,7 @@ const AdminPage = () => {
 
     return (
         <div className="adminContainer">
-            {!(username == "admin") ? (
+            {!(username == "admin" && password == "admin") ? (
                 <div class="log-form">
                     <h2>Login to your account</h2>
                     <form>
