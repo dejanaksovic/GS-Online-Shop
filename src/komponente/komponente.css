@@ -117,8 +117,27 @@ nav {
     position: absolute;
     width: 15%;
 }
+.marketICons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    color: rgb(60, 60, 60);
 
+    justify-content: space-around;
+}
+
+.marketICons a {
+    font-size: 40px;
+}
+.marketICons {
+    display: none;
+}
 @media only screen and (max-width: 1024px) {
+    .marketICons {
+        display: block;
+    }
     header .nav-btn {
         visibility: visible;
         opacity: 1;
