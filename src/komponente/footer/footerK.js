@@ -98,13 +98,13 @@ export default function Footer() {
                         <h3 style={{ fontWeight: "200" }}>
                             NEWSLETTER REGISTRACIJA
                         </h3>
-                        <p style={{ color: "#858585" }}>
+                        <p style={{ color: "#858585", textAlign: "center" }}>
                             Prijavite se za newsletter kako bi ostvarili dodatni
                             popust od 10% i dobijali informacije o novim
                             proizvodima, budućim događajima i specijalnim
                             ponudama.
                         </p>
-                        <h4 style={{ color: "#707070" }}>
+                        <h4 style={{ color: "#707070",, textAlign: "center" }}>
                             Prijavite se odmah i zgrabite kupon od 10% popusta!
                         </h4>
                         <input
@@ -211,11 +211,12 @@ export default function Footer() {
                 </div>
             </div>
             <div className="bottom">
+                                    <hr />
                 <div class="contact-info">
                     <div class="contact-details">
                         <p> C A L L&nbsp; C E N T A R</p>
                         <p>Pon-Pet od 10:00 do 16:00</p>
-                        <p className="order-by-phone">Tel: +381 62 6876873</p>
+                        <p className="order-by-phone">Tel: +381 62 687687</p>
                         <p class="order-by-phone">
                             E-mail: onemomentshop2023@gmail.com
                         </p>
@@ -224,20 +225,20 @@ export default function Footer() {
                         <p>Online Prodavnica Radi 24/7</p>
                         <p>Uvek mozete poruciti!</p>
                         <p>Poručite Telefonom od 10h - 20h na:</p>
-                        <p className="order-by-phone">0666222233</p>
+                        <p className="order-by-phone">062 687687</p>
                     </div>
                 </div>
                 <div className="bottommid">
+                                    <hr />
                     <p>
                         Nastojimo da budemo što precizniji u opisu proizvoda,
-                        prikazu slika i samih cena, ali ne možemo
-                    </p>
-                    <p>
-                        garantovati da su sve informacije kompletne i bez
-                        grešaka. Svi artikli prikazani na sajtu su deo naše
-                    </p>
+                        prikazu slika i samih cena, ali ne možemo garantovati da
+                        su sve informacije kompletne i bez grešaka. Svi artikli
+                        prikazani na sajtu su deo naše ponude i ne podrazumeva
+                        da su dostupni u svakom trenutku.
                     ponude i ne podrazumeva da su dostupni u svakom trenutku.
-                    <p></p>
+                    </p>
+                            <hr />
                     <img src={Logo}></img>
                 </div>
                 <div className="bottombot">
