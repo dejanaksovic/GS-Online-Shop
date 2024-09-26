@@ -28,9 +28,15 @@ const SviProizvodi = ({ mainTitle = "SVI PROIZVODI" }) => {
                             <div className="textContent">
                                 <p className="cardNaslov">{el.naslov}</p>
                                 <div className="cena">
-                                    <strike>{el.cena} RSD</strike>
+                                     <strike>
+                                        {Math.round(el.cena / 10) * 10} RSD
+                                    </strike>
                                     <p>
-                                        {el.cena - el.cena * (el.popust / 100)}{" "}
+                                        {Math.round(
+                                            (el.cena -
+                                                el.cena * (el.popust / 100)) /
+                                                10
+                                        ) * 10}{" "}
                                         RSD
                                     </p>
                                 </div>
