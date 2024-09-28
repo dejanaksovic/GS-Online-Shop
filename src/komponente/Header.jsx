@@ -11,6 +11,7 @@ import {
     faX,
 } from "@fortawesome/free-solid-svg-icons";
 import { MyContext } from "../context";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Products from "../proizvodi";
 function Navbar() {
     const { item, setItem } = useContext(MyContext);
@@ -109,6 +110,20 @@ function Navbar() {
                     </a>
 
                     <a href="/about">About me</a>
+                     <div className="marketICons">
+                        <a
+                            target="_blank"
+                            href="https://www.instagram.com/one_moment_shop_1/"
+                        >
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </a>
+                        <a
+                            target="_blank"
+                            href="https://www.facebook.com/profile.php?id=61554372962048"
+                        >
+                            <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                    </div>
                     <button
                         className="nav-btn nav-close-btn"
                         onClick={showNavbar}
